@@ -1,13 +1,10 @@
 const fs = require("fs")
 const { app, BrowserWindow, ipcMain, nativeTheme, Menu } = require('electron')
-const path = require('path')
+// const path = require('path')
 function createWindow() {
     const win = new BrowserWindow({
         width: 1200,
         height: 900,
-        // webPreferences: {
-        //     preload: path.join(__dirname, 'preload.js')
-        // },
         icon: "icon.ico",
         titleBarStyle: "default",
         darkTheme: true,
