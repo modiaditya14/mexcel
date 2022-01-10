@@ -1,0 +1,54 @@
+*{box-sizing:border-box;}
+body {
+    height: 97vh;
+    margin: 0;
+} 
+#tbar{
+    height: 4ch;
+    width: 100%;
+    background-color: #00dd00;
+}
+#big{
+    display: grid;
+    width: max-content;
+    height: max-content;
+    background-color: black;
+    gap: 2px;
+    grid-template-rows: 3ch auto;
+    grid-template-columns: 3ch auto;
+    grid-template-areas: ". lets" "nums sgrid";
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#big>*{
+    background-color: hsl(0, 0%, 70%);
+}
+#lets{
+    display: grid;
+    grid-area: lets;
+    grid-template-columns: repeat(10,8.5ch);
+}
+#nums{grid-area: nums;}
+#sgrid{
+    display: grid;
+    grid-area: sgrid;
+    grid-template-rows: repeat(10,3ch);
+    grid-template-columns: repeat(10,8.5ch);
+    /* gap: .5ch; */
+}
+.letr,.numy{
+    height: 3ch;
+    text-align: center;
+    border:1px solid black;
+    display: grid;
+    place-items: center;
+    -webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;
+}
+.cell{
+    border: 1px solid black;
+    margin: 0;
+    cursor: cell;
+}
+.cell:focus{
+    cursor: text;
+}
